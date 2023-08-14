@@ -448,7 +448,7 @@
           <tbody>
             <tr class="plans__bg">
               <td class="">Call Reception</td>
-              <td v-for="plan in allPlans" :key="plan.id" class="plans__center">
+              <td v-for="plan in allPlans" :key="plan.id" class="">
                 {{ plan.call_reception }}
               </td>
             </tr>
@@ -536,10 +536,12 @@ export default {
   margin: 120px 0px 150px 0px;
 
   &__words {
-    width: 45%;
+    width: 40%;
+    padding-left: 0px;
 
     @media screen and (max-width: 768px) {
       width: 100%;
+      padding-left: 44px;
     }
   }
 
@@ -566,6 +568,10 @@ export default {
     left: 0;
 
     @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 550px) {
       width: 100%;
       zoom: 0.7;
     }
